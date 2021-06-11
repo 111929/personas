@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: api_usuarios
+  datasource:
+    #driver-class-name: oracle.jdbc.driver.OracleDriver
+    driver-class-name: com.mysql.jdbc.Driver
+    #url: jdbc:oracle:thin:@192.168.1.5:1521/XEPDB1
+    url: jdbc:mysql://localhost:13306/prueba_db
+    password: tankero
+    username: dario
+  jpa:
+    #database-platform: org.hibernate.dialect.Oracle8iDialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8080
+key:
+  usuario: http://26.226.70.56:8080/usuarios/search?dni=
